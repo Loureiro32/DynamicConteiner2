@@ -1,9 +1,10 @@
 import java.util.Arrays;
 
 public class Container {
-    private int[] data = new int[10];
+    private int[] data = new int[]{1, 2, 3, 4, 5, 6};
     private int currentIndex = 0;
-    
+
+
     public void add(int value) {
 
     }
@@ -15,17 +16,10 @@ public class Container {
                     data[j] = data[j + 1];
                 }
                 data = Arrays.copyOf(data, data.length - 1);
+                System.out.println(Arrays.toString(data));
                 break;
             }
         }
 
-    }
-
-    public void resize() {
-        int[] array = new int[data.length + 2];
-        for (int i = 0; i != data.length; i++) {
-            array[i] = data[i];
-        }
-        data = array;
     }
 }
