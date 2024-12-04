@@ -1,7 +1,11 @@
 import java.util.Arrays;
 
 public class Container {
-    private int[] data = new int[]{1, 2, 3, 4, 5, 6};
+    private int[] data;
+
+    public Container(int[] data) {
+        this.data = data;
+    }
 
     public void add(int value) {
         int[] newData = new int[data.length + 1];
@@ -24,6 +28,12 @@ public class Container {
                 break;
             }
         }
-
     }
+
+    public void println() {
+        for (int i = 0; i <= data.length - 1; i++) {
+            System.out.println(data[i]);
+        }
+    }
+
 }
