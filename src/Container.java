@@ -30,7 +30,7 @@ public class Container {
         }
     }
 
-    public void println() {
+    public void printList() {
         for (int i = 0; i <= data.length - 1; i++) {
             System.out.println(data[i]);
         }
