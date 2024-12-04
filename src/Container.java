@@ -2,11 +2,15 @@ import java.util.Arrays;
 
 public class Container {
     private int[] data = new int[]{1, 2, 3, 4, 5, 6};
-    private int currentIndex = 0;
-
 
     public void add(int value) {
-
+        int[] newData = new int[data.length + 1];
+        for (int i = 0; i <= data.length - 1; i++) {
+            newData[i] = data[i];
+        }
+        newData[newData.length - 1] = value;
+        data = newData;
+        System.out.println(Arrays.toString(data));
     }
 
     public void remove(int value) {
